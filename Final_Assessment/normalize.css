@@ -1,7 +1,7 @@
 /*Heading*/
 .page-heading {
     font-family: "Raleway", sans-serif;
-    padding: 2em;    
+    padding: 1em;    
     text-align: center;    
     background: linear-gradient(180deg, #03072b 0%, #1A1E23 100%);
 	border: 2px solid #00B9D1;
@@ -21,12 +21,8 @@
 
 
 .page-heading img{
-width:337px;
-height:75px;
-/*margin: 0 0 0 10em;
-display: inline-block;
-vertical-align: middle;
-float:left;*/
+	width:337px;
+	height:75px;
 }
 
 
@@ -80,11 +76,10 @@ aside {
 	height:600px;
 }
 aside h2 {
-	color:#aac2d6;
+	color:#FA6C00;
     font-weight:normal;
     text-decoration: none;
 }
-
 aside p {
 	color:#aac2d6;
     font-weight:normal;
@@ -96,6 +91,7 @@ label{
 	font-family: "Raleway", sans-serif;
 	color:#00B9D1;
 }
+
 input {
   width: 100%;
   padding: 12px 20px;
@@ -119,12 +115,62 @@ textarea {
 .mainSectiondiv {
 	color:white;
 	font-family: "Raleway", sans-serif;
-margin-bottom:45px;
+	margin-bottom:45px;
 	margin-left: 35px;
  	width:950px;
     float:left;
 }
 
+/*checkbox in main*/
+.container {
+  //display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #aac2d6;
+  /*-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;*/
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #aac2d6;
+  border-radius: 50%;
+}
+.container:hover input ~ .checkmark {
+  background-color: #FA6C00;
+}
+.container input:checked ~ .checkmark {
+  background-color: #00B9D1;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
 
 /*button in main*/
 .btn {	

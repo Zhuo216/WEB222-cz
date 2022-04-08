@@ -21,46 +21,57 @@
     <a class="right" href="reflection.html">Reflection</a>
 </nav>
 <aside>
-    <h2>About</h2>
-    <p>WEB222 Final Assessment Winter 2022</p>
+    <!-- <h2>Error Message</h2> -->
+    <div id="errors"></div>
   </aside>
 <!-- <main> -->
     <section  class="mainSection">
         <div class="mainSectiondiv">
-            <form name="signup" action="https://httpbin.org/post" method="post">
+            <form name="signup" action="https://httpbin.org/post" method="post" onsubmit="return allFormValidation();">
             <p>
-                    <label for="productID">Product ID:</label>
-                    <!-- <input type="nnumber" name="entry01" min="8" max="8" required="required"> -->
+                    <!-- <label for="productID">Product ID:</label>                    
                     <input type="number" name="entry01"required="required"> 
                     <br />
-                    <label for="productDesc">Product Description:</label>                    
-                    <!-- <textarea name="entry02" id="entry02" cols="60" rows="3" ></textarea> -->
-                    <textarea name="entry02" required="required"></textarea>
+                    <label for="productDesc">Product Description:</label>  
+                    <textarea id="entry02" name="entry02" required="required"></textarea>
                     <br />
                     <label for="price">Price:</label>                    
                     <input type="number" name="entry03"required="required"> 
-                    <br />
-                    <label for="supname:">Supplier Username:</label>                    
+                    <br />-->
+                   <label for="supname:">Supplier Username:</label>                    
                     <input type="text" name="entry04"required="required">
                     <br />
-                    <label for="supsta:">Supplier Status:</label>                      
-                    <input type="checkbox" name="entry05" value="2" >New Supplier
-                    <input type="checkbox" name="entry05" value="3" >Contract Signed
-                    <input type="checkbox" name="entry05" value="4" >Quality Tested                  
+                    <label for="supsta:">Supplier Status:&nbsp;&nbsp;&nbsp;</label>
+                    <br />
+                    <br /> 
+                        <label class="container">New Supplier&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="entry05">
+                            <span class="checkmark"></span>
+                        </label>                      
+                        <label class="container">Contract Signed&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="entry05">
+                            <span class="checkmark"></span>
+                        </label>                      
+                        <label class="container">Quality Tested  
+                            <input type="checkbox" name="entry05">
+                            <span class="checkmark"></span>
+                       </label>                
+                    <br />
+                    <br />
+                
+                    <!-- <label for="supmail:">Supplier Email:</label>                    
+                    <input type="email" name="entry06"required="required"> --> 
 
                     <br />
-                    <label for="supmail:">Supplier Email:</label>                    
-                    <input type="email" name="entry06"required="required"> 
-
                     <br />
-
                     <input type="hidden" name="lastName" id="lastName" value="Chen"/>
                     <input type="hidden" name="studentId" id="studentId" value="112285218" />
             </p>
             <button class="btn btn-primary btn-ghost btn-shine" type="submit">
                 submit
-            </button> 
-            <button class="btn btn-primary btn-ghost btn-shine" type='reset'> 
+            </button>
+            &nbsp;&nbsp;&nbsp; 
+            <button class="btn btn-primary btn-ghost btn-shine" type='reset'onclick="clearShowErrors();" > 
 	         Clear
             </button> 
         </form>

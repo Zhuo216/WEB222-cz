@@ -1,8 +1,7 @@
 
 function allFormValidation() {
-    showErrors(); 
-   
-    return checkForAtleastOne (); 
+    showErrors();    
+    return checkForAtleastOne ()&&!checkUsername; 
   // return checkForAtleastOne ()&&checkProductID()&&!proDesc()&&checkPrice();
    
  }  
@@ -65,12 +64,20 @@ function checkPrice(){
 
 //Check Username
 function checkUsername(){
-
-
-
-
-
+    var checkUsernameStr=document.signup.entry04.value;
+    var patternUp=/^[A-Za-z]/;
+    var returnCode=0; 
+    if (checkUsernameStr.length < 6) {       
+        returnCode=1;        
+    }
+    if(!patternUp.test(checkUsernameStr)){
+        returnCode= 2;
+    }
+    if(checkUsernameStr.length < 6&&!patternUp.test(checkUsernameStr)){
+        returnCode= 3;
+    }
     
+    return returnCode;  
 }
 
 
@@ -107,6 +114,12 @@ function showErrors() {
     document.querySelector('#errors').innerHTML+="<p>3.</p>";   
     if(!checkPrice())
     document.querySelector('#errors').innerHTML+="<p>Price: Less than 1000.</p>";*/
+    if(checkUsername()==1)
+    document.querySelector('#errors').innerHTML+="<p>Supplier Username: must have at least 6 characters</p>"; 
+    if(checkUsername()==2)
+    document.querySelector('#errors').innerHTML+="<p>Supplier Username: must start with an alphabet</p>"; 
+    if(checkUsername()==3)
+    document.querySelector('#errors').innerHTML+="<p>Supplier Username: must start with an alphabet & must have at least 6 characters</p>"; 
 
     if(!checkForAtleastOne())
     document.querySelector('#errors').innerHTML+="<p>Supplier Status: None checked, user must select at least one of the check boxes.</p>"; 

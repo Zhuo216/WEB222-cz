@@ -92,21 +92,93 @@ aside p {
 }
 
 /*main*/
-section{
-  
+label{
+	font-family: "Raleway", sans-serif;
+	color:#00B9D1;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  //box-sizing: border-box;
+  border: none;
+  background-color: #aac2d6;
+  color: black;
+}
 
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  //box-sizing: border-box;
+  border: none;
+  background-color: #aac2d6;
+  color: black;
 }
 
 .mainSectiondiv {
 	color:white;
 	font-family: "Raleway", sans-serif;
-/*margin-top:45px;*/
+margin-bottom:45px;
 	margin-left: 35px;
  	width:950px;
     float:left;
 }
 
 
+/*button in main*/
+.btn {	
+	 position: relative;
+	 padding: 0.7rem 3.1rem;
+	 font-size: 1rem;
+	 line-height: 1.5;	 
+	 text-decoration: none;
+	 //text-transform: uppercase;      
+	 border: 1px solid white;
+	 outline: transparent;
+	 overflow: hidden;
+	 cursor: pointer;
+	 user-select: none;
+	 white-space: nowrap;
+	 transition: 0.25s;
+     //width: 100%;
+
+}
+ .btn:hover {
+	 background: #9e0000;
+}
+ .btn-primary {
+	 --hue: 187;
+}
+ .btn-ghost {
+	 color: #00B9D1;
+	 background-color: transparent;
+	 border-color: #00B9D1;
+}
+ .btn-ghost:hover {
+	 color: #00B9D1;
+}
+ .btn-shine {
+	 color: #aac2d6;
+}
+ .btn-shine::before {
+	 position: absolute;
+	 content: "";
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background: linear-gradient(120deg, transparent, #00B9D1, transparent);
+	 transform: translateX(-100%);
+	 transition: 0.6s;
+}
+ .btn-shine:hover {
+	 background: transparent;
+	 box-shadow: 0 0 20px 10px #00B9D1;
+}
+ .btn-shine:hover::before {
+	 transform: translateX(100%);
+}
 
 
 

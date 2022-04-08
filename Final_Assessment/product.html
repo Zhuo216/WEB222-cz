@@ -27,11 +27,43 @@
 <!-- <main> -->
     <section  class="mainSection">
         <div class="mainSectiondiv">
-            <p>I declare that my Final assessment assignment is wholly my own work in accordance with Seneca Academic Policy. No part of this assignment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the WEB222 instructor and / or made available in this assignment for my use.</p>
-            <p>I also declare that no part of this assignment has been distributed to other students.</p>
-            <p>Name: Zhuo Chen</p>
-            <p>Dated: Friday, April 15, 2022</p>  
-             
+            <form name="signup" action="https://httpbin.org/post" method="post">
+            <p>
+                    <label for="productID">Product ID:</label>
+                    <!-- <input type="nnumber" name="entry01" min="8" max="8" required="required"> -->
+                    <input type="number" name="entry01"required="required"> 
+                    <br />
+                    <label for="productDesc">Product Description:</label>                    
+                    <!-- <textarea name="entry02" id="entry02" cols="60" rows="3" ></textarea> -->
+                    <textarea name="entry02" required="required"></textarea>
+                    <br />
+                    <label for="price">Price:</label>                    
+                    <input type="number" name="entry03"required="required"> 
+                    <br />
+                    <label for="supname:">Supplier Username:</label>                    
+                    <input type="text" name="entry04"required="required">
+                    <br />
+                    <label for="supsta:">Supplier Status:</label>                      
+                    <input type="checkbox" name="entry05" value="2" >New Supplier
+                    <input type="checkbox" name="entry05" value="3" >Contract Signed
+                    <input type="checkbox" name="entry05" value="4" >Quality Tested                  
+
+                    <br />
+                    <label for="supmail:">Supplier Email:</label>                    
+                    <input type="email" name="entry06"required="required"> 
+
+                    <br />
+
+                    <input type="hidden" name="lastName" id="lastName" value="Chen"/>
+                    <input type="hidden" name="studentId" id="studentId" value="112285218" />
+            </p>
+            <button class="btn btn-primary btn-ghost btn-shine" type="submit">
+                submit
+            </button> 
+            <button class="btn btn-primary btn-ghost btn-shine" type='reset'> 
+	         Clear
+            </button> 
+        </form>
         </div>
     </section>
 <!-- </main> -->

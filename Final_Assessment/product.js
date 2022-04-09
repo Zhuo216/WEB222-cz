@@ -1,7 +1,7 @@
 
 function allFormValidation() {
     showErrors();    
-    return checkForAtleastOne ()&&!checkUsername; 
+    return checkForAtleastOne ()&&!checkUsername(); 
   // return checkForAtleastOne ()&&checkProductID()&&!proDesc()&&checkPrice();
    
  }  
@@ -122,7 +122,7 @@ function showErrors() {
     document.querySelector('#errors').innerHTML+="<p>Supplier Username: must start with an alphabet & must have at least 6 characters</p>"; 
 
     if(!checkForAtleastOne())
-    document.querySelector('#errors').innerHTML+="<p>Supplier Status: None checked, user must select at least one of the check boxes.</p>"; 
+    document.querySelector('#errors').innerHTML+="<p>Supplier Status: None checked, user must select at least one of the check boxes</p>"; 
 } 
 
 function  clearShowErrors() {

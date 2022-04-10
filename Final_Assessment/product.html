@@ -29,23 +29,27 @@
         <div class="mainSectiondiv">
             <form name="signup" action="https://httpbin.org/post" method="post" onsubmit="return allFormValidation();">
             <p>
-                    <!-- <label for="productID">Product ID:</label>                    
-                    <input type="number" name="entry01"required="required"> 
+                    <label for="productID">Product ID:</label>                    
+                    <input type="number" name="entry01" id="productID" required="required"> 
                     <br />
-                    <label for="productDesc">Product Description:</label>  
-                    <textarea id="entry02" name="entry02" required="required"></textarea>
+
+                    <label for="entry02">Product Description:</label>   
+                    <textarea id="entry02" name="entry02" minlength=20 required="required"></textarea>
                     <br />
+
                     <label for="price">Price:</label>                    
-                    <input type="number" name="entry03"required="required"> 
-                    <br />-->
-                   <label for="supname:">Supplier Username:</label>                    
-                    <input type="text" name="entry04">
+                    <input type="number" name="entry03" id="price" title="Digit only, decimal not allowed" required="required"> 
                     <br />
-                    <label for="supsta:">Supplier Status:&nbsp;&nbsp;&nbsp;</label>
+
+                    <label for="supname">Supplier Username:</label>                    
+                    <input type="text" name="entry04" id="supname">
+                    <br />
+
+                    <label for="supsta">Supplier Status:&nbsp;&nbsp;&nbsp;</label>
                     <br />
                     <br /> 
                         <label class="container">New Supplier&nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" name="entry05">
+                            <input type="checkbox" name="entry05" id="supsta" >
                             <span class="checkmark"></span>
                         </label>                      
                         <label class="container">Contract Signed&nbsp;&nbsp;&nbsp;
@@ -59,8 +63,8 @@
                     <br />
                     <br />
                 
-                    <!-- <label for="supmail:">Supplier Email:</label>                    
-                    <input type="email" name="entry06"required="required"> --> 
+                    <label for="supmail">Supplier Email:</label>                    
+                    <input type="email" name="entry06" id="supmail" required="required">
 
                     <br />
                     <br />
@@ -71,7 +75,7 @@
                 submit
             </button>
             &nbsp;&nbsp;&nbsp; 
-            <button class="btn btn-primary btn-ghost btn-shine" type='reset'onclick="clearShowErrors();" > 
+            <button class="btn btn-primary btn-ghost btn-shine" type='reset' onclick="clearShowErrors();" > 
 	         Clear
             </button> 
         </form>

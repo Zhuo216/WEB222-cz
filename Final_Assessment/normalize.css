@@ -87,6 +87,11 @@ aside p {
     text-decoration: none;
 }
 
+aside mark{
+    background-color: #1A1E23;
+	color:#00B9D1;
+}
+
 /*main*/
 label{
 	font-family: "Raleway", sans-serif;
@@ -96,8 +101,7 @@ label{
 input {
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
-  //box-sizing: border-box;
+  margin: 8px 0;  
   border: none;
   background-color: #aac2d6;
   color: black;
@@ -106,8 +110,7 @@ input {
 textarea {
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
-  //box-sizing: border-box;
+  margin: 8px 0;  
   border: none;
   background-color: #aac2d6;
   color: black;
@@ -123,8 +126,7 @@ textarea {
 }
 
 /*checkbox in main*/
-.container {
-  //display: block;
+.container {  
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
@@ -179,16 +181,14 @@ textarea {
 	 padding: 0.7rem 3.1rem;
 	 font-size: 1rem;
 	 line-height: 1.5;	 
-	 text-decoration: none;
-	 //text-transform: uppercase;      
+	 text-decoration: none;	      
 	 border: 1px solid white;
 	 outline: transparent;
 	 overflow: hidden;
 	 cursor: pointer;
 	 user-select: none;
 	 white-space: nowrap;
-	 transition: 0.25s;
-     //width: 100%;
+	 transition: 0.25s;     
 
 }
  .btn:hover {

@@ -22,8 +22,8 @@
 
 
 .page-heading img{
-	width:337px;
-	height:75px;
+	width:165px;
+	height:37px;
 }
 
 
@@ -124,6 +124,11 @@ textarea {
  	width:950px;
     float:left;
 }
+
+h3 {
+	color:#00B9D1;
+}
+
 
 /*checkbox in main*/
 .container {  

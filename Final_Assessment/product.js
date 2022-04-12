@@ -1,9 +1,8 @@
 
 function allFormValidation() {
     showErrors();    
-   // return checkProductID()&&!proDesc()&&checkPrice()&&!checkUsername(); 
+    return checkProductID()&&!proDesc()&&checkPrice()&&!checkUsername()&&checkForAtleastOne(); 
    
-      return checkForAtleastOne();
  }  
 
  //ProductID validation

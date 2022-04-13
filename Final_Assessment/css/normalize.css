@@ -1,0 +1,251 @@
+/*Heading*/
+.page-heading {
+    font-family: "Raleway", sans-serif;
+    padding: 1em;    
+    text-align: center;    
+    background: linear-gradient(180deg, #03072b 0%, #1A1E23 100%);
+	border: 2px solid #00B9D1;
+	border-radius: 15px;
+}
+
+.page-heading h1 {
+    font-size: 3em;
+    margin: .3em;
+	color: white;
+    text-shadow: 
+        	 0 0 10px #00B9D1,
+        	 0 0 20px #00B9D1,
+       		 0 0 50px #00B9D1,
+       		 0 0 100px #00B9D1,
+       		 0 0 200px #00B9D1;
+}
+
+
+.page-heading img{
+	width:165px;
+	height:37px;
+}
+
+
+
+/*body*/
+body{
+	background-color:#1A1E23
+}
+
+/*Nav*/
+nav {   
+    margin: 0;
+    padding: 0;    
+    font-family: "Raleway", sans-serif;
+    background-color: #00B9D1;
+    margin-bottom: 2em;
+    border:2px solid #1A1E23;
+    border-radius: 10px;
+    display: flex;
+}
+
+nav a {
+    display:block;
+    color: #1A1E23;
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration:none   
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color:white;
+	background-color:#1A1E23;	
+	border-radius: 10px;
+
+}
+
+a.right {    
+     margin-left: auto;
+}
+
+/*aside section*/
+aside {
+	float:left;
+	border-right: 2px solid #00B9D1;
+    padding: 0 30px;
+	font-family: "Raleway", sans-serif;
+    margin: 10px;
+    margin-left: 10px;
+	width:150px;
+	height:600px;
+}
+aside h2 {
+	color:#FA6C00;
+    font-weight:normal;
+    text-decoration: none;
+}
+aside p {
+	color:#aac2d6;
+    font-weight:normal;
+    text-decoration: none;
+}
+
+aside mark{
+    background-color: #1A1E23;
+	color:#00B9D1;
+}
+
+/*main*/
+label{
+	font-family: "Raleway", sans-serif;
+	color:#00B9D1;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;  
+  border: none;
+  background-color: #aac2d6;
+  color: black;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;  
+  border: none;
+  background-color: #aac2d6;
+  color: black;
+}
+
+.mainSectiondiv {
+	color:white;
+	font-family: "Raleway", sans-serif;
+	margin-bottom:45px;
+	margin-left: 35px;
+ 	width:950px;
+    float:left;
+}
+
+h3 {
+	color:#00B9D1;
+}
+
+
+/*checkbox in main*/
+.container {  
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #aac2d6;
+  /*-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;*/
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #aac2d6;
+  border-radius: 50%;
+}
+.container:hover input ~ .checkmark {
+  background-color: #FA6C00;
+}
+.container input:checked ~ .checkmark {
+  background-color: #00B9D1;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*button in main*/
+.btn {	
+	 position: relative;
+	 padding: 0.7rem 3.1rem;
+	 font-size: 1rem;
+	 line-height: 1.5;	 
+	 text-decoration: none;	      
+	 border: 1px solid white;
+	 outline: transparent;
+	 overflow: hidden;
+	 cursor: pointer;
+	 user-select: none;
+	 white-space: nowrap;
+	 transition: 0.25s;     
+
+}
+ .btn:hover {
+	 background: #9e0000;
+}
+ .btn-primary {
+	 --hue: 187;
+}
+ .btn-ghost {
+	 color: #00B9D1;
+	 background-color: transparent;
+	 border-color: #00B9D1;
+}
+ .btn-ghost:hover {
+	 color: #00B9D1;
+}
+ .btn-shine {
+	 color: #aac2d6;
+}
+ .btn-shine::before {
+	 position: absolute;
+	 content: "";
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background: linear-gradient(120deg, transparent, #00B9D1, transparent);
+	 transform: translateX(-100%);
+	 transition: 0.6s;
+}
+ .btn-shine:hover {
+	 background: transparent;
+	 box-shadow: 0 0 20px 10px #00B9D1;
+}
+ .btn-shine:hover::before {
+	 transform: translateX(100%);
+}
+
+
+/*footer*/
+footer {  
+	clear:both; 
+    font-family: "Raleway", sans-serif;
+    text-align: left;
+    background: #00B9D1;
+    color: #1A1E23;
+    border:2px solid #1A1E23;
+	border-radius: 5px;
+}
+footer a{
+	color: #1A1E23;
+}
+footer p{
+	margin:5px;
+}

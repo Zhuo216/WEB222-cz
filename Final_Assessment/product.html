@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB222 final assessment-Zhuo Chen</title>
+    <link rel="stylesheet" href="css/normalize.css" type='text/css' media='screen'>		
+	<script src="js/product.js" ></script>
+</head>
+<body>
+    <header class="page-heading">	
+        <div class="heading">
+        <img src="pic/seneca.png" alt="seneca" >	
+        <h1>WEB222 final assessment</h1>    
+        </div>
+</header>
+<nav>				
+    <a href="honesty.html">Welcome</a>
+    <a href="product.html">Product</a>    			
+    <a class="right" href="reflection.html">Reflection</a>
+</nav>
+<aside>
+    <!-- <h2>Error Message</h2> -->
+    <div id="errors"></div>
+  </aside>
+<!-- <main> -->
+    <section  class="mainSection">
+        <div class="mainSectiondiv">
+            <form name="signup" action="https://httpbin.org/post" method="post" onsubmit="return Formvalidation();">
+            <p>
+                    <label for="productID">Product ID:</label>                    
+                    <input type="number" name="entry01" id="productID" required="required"> 
+                    <br />
+
+                    <label for="entry02">Product Description:</label>   
+                    <textarea id="entry02" name="entry02" minlength=20 required="required"></textarea>
+                    <br />
+
+                    <label for="price">Price:</label>                    
+                    <input type="number" name="entry03" id="price" title="Digit only, decimal not allowed" required="required"> 
+                    <br />
+
+                    <label for="supname">Supplier Username:</label>                    
+                    <input type="text" name="entry04" id="supname">
+                    <br />
+
+                    <label for="supsta">Supplier Status:&nbsp;&nbsp;&nbsp;</label>
+                    <br />
+                    <br /> 
+                        <label class="container">New Supplier&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="entry05" id="supsta" >
+                            <span class="checkmark"></span>
+                        </label>                      
+                        <label class="container">Contract Signed&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="entry05">
+                            <span class="checkmark"></span>
+                        </label>                      
+                        <label class="container">Quality Tested  
+                            <input type="checkbox" name="entry05">
+                            <span class="checkmark"></span>
+                       </label>                
+                    <br />
+                    <br />
+                
+                    <label for="supmail">Supplier Email:</label>                    
+                    <input type="email" name="entry06" id="supmail" required="required">
+
+                    <br />
+                    <br />
+                    <input type="hidden" name="lastName" id="lastName" value="Chen"/>
+                    <input type="hidden" name="studentId" id="studentId" value="112285218" />
+            </p>
+            <button class="btn btn-primary btn-ghost btn-shine" type="submit">
+                submit
+            </button>
+            &nbsp;&nbsp;&nbsp; 
+            <button class="btn btn-primary btn-ghost btn-shine" type='reset' onclick="clearShowErrors();" > 
+	         Clear
+            </button> 
+        </form>
+        </div>
+    </section>
+<!-- </main> -->
+
+
+
+<footer>	  
+    <p> &nbsp; &nbsp; &nbsp; &nbsp;&copy; Zhuo Chen &nbsp;&nbsp;<a href="https://github.com/Zhuo216/WEB222">GitHub Link</a></p>
+</footer>
+</body>
+</html>

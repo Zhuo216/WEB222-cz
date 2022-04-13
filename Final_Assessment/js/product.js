@@ -1,4 +1,16 @@
+//show alert box
+function Formvalidation(){
+    var validate = allFormValidation();
+    if( validate == true ){
+        alert("Successful submission");
+    }
+    else{
+        alert("Fail to submit, please check the error message column");
+    }
+    return validate;
+    }
 
+//validate all the forms and call showErrors()
 function allFormValidation() {
     showErrors();    
     return checkProductID()&&!proDesc()&&checkPrice()&&!checkUsername()&&checkForAtleastOne(); 
@@ -23,7 +35,7 @@ function proDesc(){
     if(Entry02!=null){
         proDescString =Entry02.value;
         var patternUp=/^[A-Z]/;
-        var patternChar=/^[A-Za-z]+$/;       
+        var patternChar=/^[A-Za-z ]+$/;       //only alphabets with spaces
        
         if(!patternUp.test(proDescString)){
             returnCode= 1;
@@ -89,6 +101,7 @@ function get_checked_number() {
     return count;		
 }
 
+//show error message
 function showErrors() {   
     var counter=0;
   document.querySelector('#errors').innerHTML = "<h2>Error Message</h2>";
@@ -133,6 +146,7 @@ function showErrors() {
 }
 } 
 
+//innerHTML for error message
 function  clearShowErrors() {
   document.querySelector('#errors').innerHTML = " ";    
 } 

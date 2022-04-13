@@ -233,8 +233,6 @@ h3 {
 }
 
 
-
-
 /*footer*/
 footer {  
 	clear:both; 
@@ -245,8 +243,9 @@ footer {
     border:2px solid #1A1E23;
 	border-radius: 5px;
 }
-
+footer a{
+	color: #1A1E23;
+}
 footer p{
-margin:5px;
-
+	margin:5px;
 }
